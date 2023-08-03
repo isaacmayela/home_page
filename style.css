@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600;700&display=swap');
+
+/* General style */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
 body{
@@ -14,22 +19,63 @@ li{
 
 header{
     height: 100px;
-    background-color: aqua;
 }
 
 main{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 10px;
+    gap: 1.3em;
     grid-auto-rows: minmax(100px, auto);
 }
 
+/* General style */
+
+
+/* first section */
+
 .first_section{
     background-color: aqua;
-    grid-column: 1 / 11;
+    grid-column: 1 / 9;
 }
 
-.second_section{
-    background-color: blue;
-    grid-column: 11 / 13;
+.desktop{
+    width: 100%;
 }
+
+/* first section */
+
+
+/* Secon section */
+.second_section{
+    background-color: #00011a;
+    grid-column: 9 / 13;
+    padding: 2em 1em 0 1em;
+    color: #fff;
+}
+
+.second_section h3{
+    font-size: 1.7em;
+}
+
+.new_divs {
+    padding: 2.5em 0;
+}
+
+.new_divs h5{
+    font-size: 1em;
+}
+
+.new_divs p{
+    font-weight: 100
+}
+
+.middle{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.middle h5{
+    color: #f4a535;
+}
+
+/* Secon section */
