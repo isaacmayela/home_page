@@ -231,23 +231,35 @@ footer div h3{
         padding: 1em 1em 2em 1em;
     }
 
-    .menu{
-        /* position: absolute;
-        top:0;
-        right: 0;
-        background-color: red;
-        width: 75%;
-        height: 100vh; */
+    #menu-mobile{
         display: none;
+        transition: all 0.50s;
     }
 
-    /* .menu ul{
-        display: flex;
-        flex-direction: column;
-    } */
+    #menu-mobile.active{
+        display: block;
+        position: absolute;
+        top:0;
+        right: 0;
+        background-color: #fff;
+        width: 75%;
+        height: 100vh;
+        transition: all 0.50s;
+    }
+
+    .menu ul{
+        display: block;
+        padding: 2rem 0 0 1rem;
+        margin-top: 5em;
+    } 
+
+    .menu ul li{
+        margin-bottom: 2em;
+    } 
 
     .menu_toggle{
         display: block;
+        z-index: 999;  
     }
 
     main, footer, .bright_future{
