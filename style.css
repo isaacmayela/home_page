@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 /* General style */
 
@@ -21,29 +22,67 @@ a{
 
 
 body{
-    padding: 4em 6em 6em 6em;
+    padding: 4em 9em 6em 9em;
 }
 
+/* BIGINING OF THE HEADER */
+
 header{
-    height: 100px;
+    margin-bottom: 3em;
 }
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo p{
+    font-size: 3em;
+    font-family: 'Lobster', cursive;
+}
+
+.menu ul{
+    display: flex;
+    gap: 2em;
+}
+
+.menu_toggle{
+    display: none;
+    color: black;
+    font-size: 2.5em;
+}
+
+.menu ul li a {
+    color: rgb(108, 108, 108);
+}
+
+.menu ul li a:hover {
+    color: #ed3f32;
+    transition: all 0.33s;
+}
+
+/* BIGINING OF THE MAIN */
 
 main{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 1.3em;
-    grid-auto-rows: minmax(100px, auto);
 }
 
 
 /* first section */
 
 .first_section{
-    /* background-color: aqua; */
     grid-column: 1 / 9;
 }
 
-.desktop{
+.desktop_image{
+    width: 100%;
+}
+
+.mobile_image{
+    display: none;
     width: 100%;
 }
 
@@ -53,19 +92,19 @@ main{
     padding-top: 1.5em;
 }
 
-.caption{
+.bright_future .caption{
     grid-column: 1 / 2;
 }
 
-.caption p{
+.bright_future .caption p{
     font-size: 3em;
     font-weight: 600;
     line-height: 1em;
+    width: 6em;
 }
 
 .description{
     grid-column: 2 / 3;
-    /* background-color: #f4a535; */
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -73,10 +112,15 @@ main{
 }
 
 .description a{
-    background-color: #00011a;
+    background-color: #ed3f32;
     color: #fff;
     padding: 0.5em 1em;
     width: 8em;
+}
+
+.description a:hover{
+    background-color: #00011a;
+    transition: all 0.33s;
 }
 
 /* first section */
@@ -92,14 +136,26 @@ main{
 
 .second_section h3{
     font-size: 1.7em;
+    color: #f4a535;
 }
 
 .new_divs {
     padding: 2.5em 0;
 }
 
-.new_divs h5{
+.new_divs a{
     font-size: 1em;
+    color: #fff;
+}
+
+.new_divs a{
+    font-size: 1.2em;
+    font-weight: 600
+}
+
+.new_divs a:hover{
+    color: #f4a535;
+    transition: all 0.33s;
 }
 
 .new_divs p{
@@ -111,8 +167,106 @@ main{
     border-bottom: 1px solid white;
 }
 
-.middle h5{
-    color: #f4a535;
+/* Secon section */
+
+/* BEGINING FOOTER */
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 4em;
 }
 
-/* Secon section */
+.reviving, .laptop, .gaming{
+    display: flex;
+    gap: 1.5em;
+    margin-bottom: 2em;
+}
+
+.reviving{
+    grid-column: 1 / 2;
+}
+
+.laptop{
+    grid-column: 2 / 3;
+}
+
+.gaming{
+    grid-column: 3 / 4;
+}
+
+footer div img{
+    width: 6em;
+}
+
+footer div h3{
+    font-size: 2em;
+    color: rgb(195, 195, 195);
+}
+
+.image_description h3{
+    margin-bottom: 0.4em;
+}
+
+.image_description a{
+    color: black;
+    font-weight: 900;
+}
+
+.image_description a:hover{
+    color: #ed3f32;
+    transition: all 0.33s;
+}
+
+.image_description p{
+    padding-top: 0.6em;
+}
+
+
+/* media queries */
+
+@media screen and (max-width:500px){
+
+    body{
+        padding: 1em 1em 2em 1em;
+    }
+
+    .menu{
+        /* position: absolute;
+        top:0;
+        right: 0;
+        background-color: red;
+        width: 75%;
+        height: 100vh; */
+        display: none;
+    }
+
+    /* .menu ul{
+        display: flex;
+        flex-direction: column;
+    } */
+
+    .menu_toggle{
+        display: block;
+    }
+
+    main, footer, .bright_future{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .desktop_image{
+       display: none;
+    }
+
+    .mobile_image{
+        display: block;
+    }
+    .description a{
+        margin-top: 1em;
+        margin-bottom: 2em;
+    }
+    .bright_future .caption{
+        margin-bottom: 1em;
+    }
+}
